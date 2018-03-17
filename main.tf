@@ -84,6 +84,7 @@ resource "google_compute_route" "nat-gateway" {
 
 resource "google_compute_firewall" "nat-gateway" {
   name    = "${var.name}nat-${var.zone == "" ? lookup(var.region_params["${var.region}"], "zone") : var.zone}"
+  project = "${var.project}"
   network = "${var.network}"
 
   allow {
