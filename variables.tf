@@ -112,6 +112,10 @@ variable region_params {
       zone = "europe-west3-b"
     }
 
+    europe-west4 {
+      zone = "europe-west4-b"
+    }
+
     asia-southeast1 {
       zone = "asia-southeast1-b"
     }
