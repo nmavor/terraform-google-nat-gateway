@@ -63,7 +63,7 @@ module "nat-gateway" {
   service_port      = "80"
   service_port_name = "http"
   startup_script    = "${data.template_file.nat-startup-script.rendered}"
-
+  service_account_email = "${var.service_account_email}"
   // Race condition when creating route with instance in managed instance group. Wait 30 seconds for the instance to be created by the manager.
   local_cmd_create = "sleep 30"
 

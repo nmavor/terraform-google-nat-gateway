@@ -78,7 +78,10 @@ variable squid_config {
   description = "The squid config file to use. If not specifed the module file config/squid.conf will be used."
   default     = ""
 }
-
+variable service_account_email {
+  description = "The email of the service account for the instance template."
+  default     = "default"
+}
 variable region_params {
   description = "Map of default zones and IPs for each region. Can be overridden using the `zone` and `ip` variables."
   type        = "map"
